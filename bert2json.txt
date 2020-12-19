@@ -1,0 +1,1 @@
+python ./bert/extract_features.py --input_file=../dataIonCom/ligand/zn/fasta.txt --output_file=E:/zn_large.jsonl --vocab_file=./vocabs.txt --bert_config_file=./bert_large_L-24_H-1024_A-16_I-512.json --init_checkpoint=./bert_large_L-24_H-1024_A-16_I-512/model.ckpt-1000000.index --do_lower_case=False --layers=-1,-2,-3,-4 --max_seq_length=512 --batch_size=64
