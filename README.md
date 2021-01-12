@@ -14,3 +14,7 @@ Use "bert2json.txt" to extract BERT features as JSON files
 Use "jsonl2csv.py" to convert JSON to CSV files
 ### Step 4
 Use "2D_CNN.py" to train 2D CNN model from generated CSV files
+
+## Citation
+Please cite our paper as:
+>Le NQK, Ho QT, Nguyen TTD, and Ou YY (2021) A Transformer Architecture Based on BERT and 2D Convolutional Neural Network to Identify DNA Enhancers from Sequence Information. *Briefings in Bioinformatics.* https://doi.org/10.1093/bib/bbab005.
