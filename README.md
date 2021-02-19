@@ -6,12 +6,23 @@ Recently, language representation models have drawn a lot of attention in the na
 ![Image browser window](figures/flowchart.png)
 
 ## Step by step for training model
+### Dependencies
+- Python 3
+- Tensorflow 1.x: https://www.tensorflow.org/
+- BERT: https://github.com/google-research/bert
+
+### Prediction step-by-step:
 ### Step 1
-Use "run_create_pretraining_512_base.py" file for pre-trained BERT
+Use "extract_seq.py" file to generate JSON files
+- *python extract_seq.py*
+
 ### Step 2
-Use "bert2json.txt" to extract BERT features as JSON files
+Use command line in "bert2json.txt" to train BERT model and extract features
+
 ### Step 3
-Use "jsonl2csv.py" to convert JSON to CSV files
+Use "jsonl2csv.py" to transfrom JSON to CSV files:
+- *python jsonl2csv.py json_file csv_file*
+- 
 ### Step 4
 Use "2D_CNN.py" to train 2D CNN model from generated CSV files
 
