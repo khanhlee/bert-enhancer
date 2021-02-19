@@ -22,7 +22,7 @@ Use command line in "bert2json.txt" to train BERT model and extract features
 ### Step 3
 Use "jsonl2csv.py" to transfrom JSON to CSV files:
 - *python jsonl2csv.py json_file csv_file*
-- 
+
 ### Step 4
 Use "2D_CNN.py" to train 2D CNN model from generated CSV files
 
