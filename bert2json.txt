@@ -1,4 +1,4 @@
-python ./bert/extract_seq.py 
+python ./bert/extract_features.py 
 	--input_file=./input.txt 
 	--output_file=E:/output.jsonl
 	--vocab_file=./vocabs.txt
