@@ -13,7 +13,7 @@ Recently, language representation models have drawn a lot of attention in the na
 
 ### Prediction step-by-step:
 ### Step 1
-Use "extract_seq.py" file to generate JSON files
+Use "extract_seq.py" file to generate seq files from full FASTA file
 - *python extract_seq.py*
 
 ### Step 2
