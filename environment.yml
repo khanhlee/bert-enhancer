@@ -1,0 +1,8 @@
+name: bert-enhancer
+channels:
+  - defaults
+  - conda-forge
+  - bioconda
+dependencies:
+  - tensorflow-gpu=1.13
+  - python

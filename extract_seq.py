@@ -1,10 +1,10 @@
 import os
+from pathlib import Path
 import re
 
-full_path = os.path.realpath(__file__)
-os.chdir(os.path.dirname(full_path))
+FOLDER_DATA = Path('data')
 
-print(f"Change CWD to: {os.path.dirname(full_path)}")
+print(f"Change CWD to: {os.path.dirname(FOLDER_DATA)}")
 
 def extract_seq(file_path, dir_path='seq', seq_length=510):
     if not os.path.exists(dir_path):
@@ -25,8 +25,8 @@ def extract_seq(file_path, dir_path='seq', seq_length=510):
     print(f"Number of sequences: {nseq}")
     print(f"Number of samples: {nsmp}")
 
-extract_seq('non.cv.txt', 'cv_neg')
-extract_seq('enhancer.cv.txt', 'cv_pos')
+extract_seq(FOLDER_DATA / 'non.cv.txt', 'cv_neg')
+extract_seq(FOLDER_DATA / 'enhancer.cv.txt', 'cv_pos')
 
-extract_seq('non.ind.txt', 'ind_neg')
-extract_seq('enhancer.ind.txt', 'ind_pos')
+extract_seq(FOLDER_DATA / 'non.ind.txt', 'ind_neg')
+extract_seq(FOLDER_DATA / 'enhancer.ind.txt', 'ind_pos')

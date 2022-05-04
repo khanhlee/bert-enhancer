@@ -1,0 +1,13 @@
+# sequence files
+*.seq
+
+# extract_seq.py folders:
+cv_neg
+cv_pos
+
+ind_neg
+ind_pos
+
+# python
+*.pyc
+*zip
