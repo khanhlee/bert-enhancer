@@ -25,7 +25,7 @@ Use "extract_seq.py" file to generate seq files from full FASTA file
 Use command to train BERT model and extract features
 
 ```bash
-python extract_features.py 	--input_file=input.txt 	--output_file=output.jsonl	--vocab_file=vocabs.txt	--bert_config_file=./multi_cased_L-12_H-768_A-12/bert_config.json --init_checkpoint=./multi_cased_L-12_H-768_A-12/bert_model --do_lower_case=False --layers=-1,2,-3,-4 --max_seq_length=512 --batch_size=64
+python extract_features.py --input_file=input.txt --output_file=output.jsonl --vocab_file=multi_cased_L-12_H-768_A-12/vocab.txt --bert_config_file=multi_cased_L-12_H-768_A-12/bert_config.json --init_checkpoint=multi_cased_L-12_H-768_A-12/bert_model.ckpt.index --do_lower_case=False --layers=-1,2,-3,-4 --max_seq_length=512 --batch_size=64
 ```
 
 ### Step 3
