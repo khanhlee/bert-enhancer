@@ -11,13 +11,22 @@ Recently, language representation models have drawn a lot of attention in the na
 - Tensorflow 1.x: https://www.tensorflow.org/
 - BERT: https://github.com/google-research/bert
 
+    *   **[`BERT-Base, Multilingual Cased`](https://storage.googleapis.com/bert_models/2018_11_23/multi_cased_L-12_H-768_A-12.zip)**:
+    104 languages, 12-layer, 768-hidden, 12-heads, 110M parameters
+    * [download `modeling.py`](https://github.dev/google-research/bert/blob/master/modeling.py#L1) (`extract_features.py` needs it)
+    * download [`tokenization.py`](https://github.dev/google-research/bert/blob/eedf5716ce1268e56f0a50264a88cafad334ac61/tokenization.py) (`extract_features.py` needs it)
+
 ### Prediction step-by-step:
 ### Step 1
 Use "extract_seq.py" file to generate seq files from full FASTA file
 - *python extract_seq.py*
 
 ### Step 2
-Use command line in "bert2json.txt" to train BERT model and extract features
+Use command to train BERT model and extract features
+
+```bash
+python extract_features.py --input_file=input.txt --output_file=output.jsonl --vocab_file=multi_cased_L-12_H-768_A-12/vocab.txt --bert_config_file=multi_cased_L-12_H-768_A-12/bert_config.json --init_checkpoint=multi_cased_L-12_H-768_A-12/bert_model.ckpt.index --do_lower_case=False --layers=-1,2,-3,-4 --max_seq_length=512 --batch_size=64
+```
 
 ### Step 3
 Use "jsonl2csv.py" to transfrom JSON to CSV files:
